@@ -1,0 +1,130 @@
+<html>
+<head>
+<title>TugasAkhir1.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+TugasAkhir1.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.company</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">javax.swing.*</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">java.awt.event.ActionEvent</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">java.awt.event.ActionListener</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">TugasAkhir1 {</span>
+    <span class="s0">private </span><span class="s1">JPanel panel</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">JComboBox nama_barang</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">JTextField harga_barang</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">JTextField jumlah_beli</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">JTextField jumlah_harga</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">JTextField jumlah_bayar</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">JTextField jumlah_kembalian</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">JButton hapus</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">JButton keluar</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">JButton hitung_jumlah_barang</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">JButton bayar</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">JTextArea textarea</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">JButton cetak</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">JTextField nama_pembeli</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">JTextField alamat</span><span class="s0">;</span>
+
+    <span class="s0">public static void </span><span class="s1">main(String[] args){</span>
+        <span class="s1">JFrame frame = </span><span class="s0">new </span><span class="s1">JFrame(</span><span class="s2">&quot;HARRY STYLES'S MERCHANDISE&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">frame.setContentPane(</span><span class="s0">new </span><span class="s1">TugasAkhir1().panel)</span><span class="s0">;</span>
+        <span class="s1">frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)</span><span class="s0">;</span>
+        <span class="s1">frame.pack()</span><span class="s0">;</span>
+        <span class="s1">frame.setVisible(</span><span class="s0">true</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public </span><span class="s1">TugasAkhir1() {</span>
+        <span class="s1">hapus.addActionListener(</span><span class="s0">new </span><span class="s1">ActionListener() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">actionPerformed(ActionEvent e) {</span>
+                <span class="s1">nama_pembeli.setText(</span><span class="s2">&quot;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">harga_barang.setText(</span><span class="s2">&quot;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">jumlah_beli.setText(</span><span class="s2">&quot;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">jumlah_harga.setText(</span><span class="s2">&quot;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">jumlah_bayar.setText(</span><span class="s2">&quot;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">jumlah_kembalian.setText(</span><span class="s2">&quot;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">textarea.setText(</span><span class="s2">&quot;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">nama_barang.setSelectedIndex(</span><span class="s3">0</span><span class="s1">)</span><span class="s0">;</span>
+
+            <span class="s1">}</span>
+        <span class="s1">})</span><span class="s0">;</span>
+        <span class="s1">keluar.addActionListener(</span><span class="s0">new </span><span class="s1">ActionListener() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">actionPerformed(ActionEvent e) {</span>
+                <span class="s1">System.exit(</span><span class="s3">0</span><span class="s1">)</span><span class="s0">;</span>
+
+            <span class="s1">}</span>
+        <span class="s1">})</span><span class="s0">;</span>
+        <span class="s1">hitung_jumlah_barang.addActionListener(</span><span class="s0">new </span><span class="s1">ActionListener() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">actionPerformed(ActionEvent e) {</span>
+                <span class="s0">int </span><span class="s1">JumlahBarang = Integer.parseInt(jumlah_beli.getText())</span><span class="s0">;</span>
+                <span class="s0">int </span><span class="s1">HargaBarang = Integer.parseInt(harga_barang.getText())</span><span class="s0">;</span>
+                <span class="s1">jumlah_harga.setText(Integer.toString(HargaBarang * JumlahBarang))</span><span class="s0">;</span>
+            <span class="s1">}</span>
+        <span class="s1">})</span><span class="s0">;</span>
+        <span class="s1">nama_barang.addActionListener(</span><span class="s0">new </span><span class="s1">ActionListener() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">actionPerformed(ActionEvent e) {</span>
+                <span class="s1">String NamaBarang = (String) nama_barang.getSelectedItem()</span><span class="s0">;</span>
+                <span class="s0">switch </span><span class="s1">(NamaBarang) {</span>
+                    <span class="s0">case </span><span class="s2">&quot;Fine Line T-Shirt (Black)&quot;</span><span class="s1">:</span>
+                        <span class="s1">harga_barang.setText(</span><span class="s2">&quot;450000&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s0">break;</span>
+                    <span class="s0">case </span><span class="s2">&quot;Fine Line T-Shirt (White)&quot;</span><span class="s1">:</span>
+                        <span class="s1">harga_barang.setText(</span><span class="s2">&quot;450000&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s0">break;</span>
+                    <span class="s0">case </span><span class="s2">&quot;Treat People With Kindness Hoodie (Black)&quot;</span><span class="s1">:</span>
+                        <span class="s1">harga_barang.setText(</span><span class="s2">&quot;700000&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s0">break;</span>
+                    <span class="s0">case </span><span class="s2">&quot;Treat People With Kindness Hoodie (Grey)&quot;</span><span class="s1">:</span>
+                        <span class="s1">harga_barang.setText(</span><span class="s2">&quot;700000&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s0">break;</span>
+                    <span class="s0">case </span><span class="s2">&quot;Watermelon Sugar Totebag&quot;</span><span class="s1">:</span>
+                        <span class="s1">harga_barang.setText(</span><span class="s2">&quot;175000&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s0">break;</span>
+
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+        <span class="s1">})</span><span class="s0">;</span>
+        <span class="s1">bayar.addActionListener(</span><span class="s0">new </span><span class="s1">ActionListener() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">actionPerformed(ActionEvent e) {</span>
+                <span class="s0">int </span><span class="s1">JumlahBayar = Integer.parseInt(jumlah_bayar.getText())</span><span class="s0">;</span>
+                <span class="s0">int </span><span class="s1">JumlahHarga = Integer.parseInt(jumlah_harga.getText())</span><span class="s0">;</span>
+                <span class="s1">jumlah_kembalian.setText(Integer.toString(JumlahBayar-JumlahHarga))</span><span class="s0">;</span>
+            <span class="s1">}</span>
+        <span class="s1">})</span><span class="s0">;</span>
+        <span class="s1">cetak.addActionListener(</span><span class="s0">new </span><span class="s1">ActionListener() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">actionPerformed(ActionEvent e) {</span>
+                <span class="s0">int </span><span class="s1">JumlahKembalian = Integer.parseInt(jumlah_kembalian.getText())</span><span class="s0">;</span>
+                <span class="s0">if</span><span class="s1">(JumlahKembalian&gt;=</span><span class="s3">0</span><span class="s1">){</span>
+                    <span class="s1">textarea.setText(</span><span class="s2">&quot;Pembelian atas nama: &quot; </span><span class="s1">+ nama_pembeli.getText()</span>
+                            <span class="s1">+ </span><span class="s2">&quot;</span><span class="s0">\n</span><span class="s2">Alamat: &quot; </span><span class="s1">+ alamat.getText()</span>
+                            <span class="s1">+ </span><span class="s2">&quot;</span><span class="s0">\n</span><span class="s2">Barang yang dibeli: &quot; </span><span class="s1">+ nama_barang.getSelectedItem()</span>
+                            <span class="s1">+ </span><span class="s2">&quot;</span><span class="s0">\n</span><span class="s2">Jumlah Barang: &quot; </span><span class="s1">+ jumlah_beli.getText() + </span><span class="s2">&quot;</span><span class="s0">\n</span><span class="s2">Total Harga: &quot;</span>
+                            <span class="s1">+ jumlah_harga.getText() + </span><span class="s2">&quot;</span><span class="s0">\n</span><span class="s2">Pembelian berhasil dilakukan!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+                <span class="s1">}</span><span class="s0">else </span><span class="s1">{</span>
+                    <span class="s1">textarea.setText(</span><span class="s2">&quot;Pembelian gagal dilakukan karena uang anda kurang!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+        <span class="s1">})</span><span class="s0">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
